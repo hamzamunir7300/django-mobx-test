@@ -21,6 +21,7 @@ Requirements:
 - We should prevent concurrency issues for purchases. For example, if two guests purchase the remaining one ticket at the same time, only one request should succeed as there is only one ticket is remaining.
 - Build a unit test for concurrency requests of ticket purchase using Tread, the default setting should be 10.
 - We don't have to make UI beauty, just use pure html/css.
+- Build the initial mock data generation script for resturants and owneres and comments it on PR
   
 Page URL:
 -----
