@@ -1,0 +1,361 @@
+h4 {
+  font-family: 'Futura PT Medium';
+}
+h1 {
+  font-family: 'Futura PT Medium' !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px;
+  color: #3B6182;
+}
+.white {
+  color: white !important;
+}
+.absolute {
+  position: absolute;
+  top: 50%;
+  margin-top: -25%;
+}
+.chid {
+  top: 20%;
+}
+.special-margin {
+  margin-top: 90px;
+}
+.heightmaxx {
+  min-height: calc(100vh - 57px - 62px - 27px);
+}
+.box {
+  flex: 1 1;
+  text-align: center;
+}
+.align-center {
+  align-self: center;
+}
+.xx {
+  align-self: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.xxx {
+  align-self: center;
+  margin-top: 25vh;
+}
+.col-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+}
+.heightmax {
+  min-height: calc(100vh - 57px - 62px - 27px);
+}
+.heightmaxx {
+  min-height: calc(100vh - 57px - 62px - 27px);
+}
+.heightmux {
+  min-height: calc(100vh - 181px);
+}
+.bg {
+  /* background-color: #f8f9fa; */
+  background-color: white;
+}
+.boder {
+  border: 3px solid #3B6182 !important;
+}
+.boder-bottom {
+  border-bottom: 1px solid white;
+}
+.table {
+  border-collapse: collapse;
+}
+.sms {
+  width: 140px;
+}
+.rel {
+  position: relative;
+}
+.inline {
+  display: inline-block;
+}
+.button {
+  font-family: 'Futura PT Medium';
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 1px;
+  background-color: #3B6182;
+  border-radius: 50px;
+  padding: 15px 50px 15px;
+  color: white;
+  border: 0;
+}
+.button:focus {
+  outline: 0;
+}
+.btn-text-small {
+  font-size: 1.18rem;
+  padding: 15px 50px 14px;
+}
+.button:hover {
+  background-color: #3B6182;
+  color: white;
+  text-decoration: none;
+}
+.pricing .button:hover {
+  color: #3B6182;
+  background-color: white;
+}
+.pricing .button:hover {
+  color: #3B6182;
+  background-color: white;
+}
+.black {
+  color: #3B6182 !important;
+}
+.bg-blue {
+  background-color: #3B6182;
+  color: white;
+}
+.bg-grey {
+  background-color: #3B6182;
+  color: white;
+}
+.text-blue {
+  color: #3B6182;
+}
+.border-radius {
+  border-radius: 15px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+}
+.col-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+}
+.absolute {
+  position: absolute;
+  top: 50%;
+  margin-top: -25%;
+}
+.input {
+  width: 100%;
+  height: 39px;
+  border: 3px solid #3B6182;
+  border-radius: 7px;
+  padding: 3px 7px;
+}
+input:focus {
+  border: 3px solid #3B6182 !important;
+  outline: 0;
+}
+
+::-webkit-input-placeholder { 
+  color: #3B6182;
+  font-family: "Futura PT Medium";
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #3B6182;
+  font-family: "Futura PT Medium";
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #3B6182;
+  font-family: "Futura PT Medium";
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #3B6182;
+  font-family: "Futura PT Medium";
+}
+.button-white {
+  border-radius: 50px;
+  border: 2px solid white !important;
+  padding: 6px 20px !important;
+}
+.button-white:focus {
+  outline: 0 !important;
+}
+.button-white-small {
+  padding: 15px 12px 13px !important;
+  border-radius: 50px;
+  border: 2px solid white !important;
+}
+.button-white:hover {
+  box-shadow: 0 0 5px 2px white;
+  cursor: pointer;
+}
+.button-white-small:hover {
+  box-shadow: 0 0 5px 2px white;
+  cursor: pointer;
+}
+.cursor {
+  cursor: pointer;
+}
+.letter-spacing {
+  letter-spacing: 1px;
+}
+.tabl {
+  text-align: center;
+  font-family: 'Futura PT Medium';
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+.boder-white {
+  border: 3px solid white;
+}
+.border-shadow {
+  box-shadow: 0 0 13px 0 #3B6182;
+}
+.box-shadow {
+  box-shadow: 0 0 5px;
+}
+.text-grey {
+  color: #3B6182;
+} 
+.text-black {
+  color: #000 !important;
+}
+.small-font {
+  font-size: 1.1rem;
+  font-family: 'Futura PT Medium';
+}
+.modall {
+  padding: 3rem 4rem;
+  background-color: white;
+}
+.modall > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 2rem;
+  font-family: 'Futura PT Bold';
+  text-align: center;
+  padding: 5px;
+}
+.modall > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modall > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modall > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 5px 5.5px 3px 4.5px;
+  line-height: 20px;
+  right: 14px;
+  top: 11px;
+  font-size: 1.6rem;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+  color: #000;
+}
+.modall > .close:hover {
+  color: #000 !important;
+}
+.popup-content {
+  width: 40% !important;
+  border: 5px solid #3B6182 !important;
+  border-radius: 15px;
+  padding: 0.5rem !important;
+}
+.nothanks {
+  font-size: 1.2rem;
+  font-family: "Futura PT Medium";
+  cursor: pointer;
+  color: #3B6182;
+  border-bottom: 2px solid #a39f9f;
+}
+.nothanks:hover {
+  border-bottom: 2px solid #3B6182;
+}
+.email-input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.3rem;
+  border: 2px solid #b2bcc3;
+  border-radius: 10px;
+}
+.text-input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem !important;
+  font-size: 1.3rem;
+  border: 2px solid #b2bcc3;
+  border-radius: 10px;
+  color: #3B6182 !important;
+  min-height: 15vh !important;
+}
+.text-input:focus {
+  border: 3px solid #3B6182 !important;
+  outline: 0;
+}
+.popup-overlay {
+  z-index: 1300 !important;
+}
+@media (max-width: 756px) {
+  .dropdown .dropdown-toggle::after {
+    top: 50%; 
+  }
+  .navbar-collapse .show .dropdown-toggle::after {
+    top: 13%; 
+  }
+}
+.MuiGridListTile-root {
+  width: 100% !important;
+}
+.chart canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
+.set-chart {
+  height: 30rem;
+  width: 60rem;
+  margin: auto;
+}
+.reply {
+  padding: 2px 6px;
+  background-color: white;
+  color: #3B6182;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+
+.inner-glow:hover {
+  box-shadow: 0 0 5px white;
+  border-radius: 15px;
+}
+.abs {
+  position: absolute;
+  left: 90%;
+  top: 2;
+}
+.col-containerr {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+}
+
+.coll {
+  flex: 1 1 auto;
+  padding: 10px;
+  max-width: 350px;
+  min-width: 350px;
+}
+.mainn {
+  padding: 16px;
+  border-radius: 6px;
+}

@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "2204958e-a33a-462f-95ba-cddd3c97b147",
+		"name": "django_mobx_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "tester1",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "tester@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tester123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/signup/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": {
+				"id": 1,
+				"email": "tester@gmail.com",
+				"username": "tester1"
+			}
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "tester1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tester123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/login/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login",
+						""
+					]
+				}
+			},
+			"response": {
+				"token": "6bedbebbbce9e8a66148cbe92a329063c2ab52ec",
+				"user": {
+					"id": 1,
+					"username": "tester1",
+					"email": "tester@gmail.com"
+				}
+			}
+		},
+		{
+			"name": "create_restaurant_instance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6bedbebbbce9e8a66148cbe92a329063c2ab52ec",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "restaurant_2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						""
+					]
+				}
+			},
+			"response": {
+				"data": {
+					"id": 2,
+					"name": "restaurant_2",
+					"restaurants_url": "m2f8XcFMkn2V9Zd72c3LxW",
+					"owner": 1
+				}
+			}
+		},
+		{
+			"name": "get_all_restaurants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token 6bedbebbbce9e8a66148cbe92a329063c2ab52ec"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						""
+					]
+				}
+			},
+			"response": {
+				"data": [
+					{
+						"id": 1,
+						"name": "restaurant_1",
+						"restaurants_url": "XLQfeLgsRcntd5WhsxmwZb",
+						"owner": 1
+					},
+					{
+						"id": 2,
+						"name": "restaurant_2",
+						"restaurants_url": "m2f8XcFMkn2V9Zd72c3LxW",
+						"owner": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "get_specific_restaurants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token 6bedbebbbce9e8a66148cbe92a329063c2ab52ec"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"1",
+						""
+					]
+				}
+			},
+			"response": {
+				"data": {
+					"id": 1,
+					"name": "restaurant_1",
+					"restaurants_url": "XLQfeLgsRcntd5WhsxmwZb",
+					"owner": 1
+				}
+			}
+		},
+		{
+			"name": "delete_specific_restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token 6bedbebbbce9e8a66148cbe92a329063c2ab52ec"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants/2/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"2",
+						""
+					]
+				}
+			},
+			"response": {
+				"data": 200
+			}
+		},
+		{
+			"name": "create_ticket_instance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6bedbebbbce9e8a66148cbe92a329063c2ab52ec",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ticket_4",
+							"type": "text"
+						},
+						{
+							"key": "max_purchase",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/ticket/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"1",
+						"ticket",
+						""
+					]
+				}
+			},
+			"response": {
+				"data": {
+					"id": 3,
+					"name": "ticket_4",
+					"amount": 200,
+					"max_purchase": 10,
+					"sell_out": 0,
+					"ticket_coupon": "9HyUXM7VL48dcfrwZ9yLr2",
+					"restaurant": 1
+				}
+			}
+		},
+		{
+			"name": "get_all_restaurant_tickets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token 6bedbebbbce9e8a66148cbe92a329063c2ab52ec"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/tickets/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"1",
+						"tickets",
+						""
+					]
+				}
+			},
+			"response": {
+				"data": [
+					{
+						"id": 1,
+						"name": "ticket_2",
+						"amount": 0,
+						"max_purchase": 10,
+						"sell_out": 0,
+						"ticket_coupon": "DrR4RUogLuXZofYemTpxop",
+						"restaurant": 1
+					},
+					{
+						"id": 2,
+						"name": "ticket_2",
+						"amount": 200,
+						"max_purchase": 10,
+						"sell_out": 0,
+						"ticket_coupon": "MG4vs9dQwHmR2cKwzQkLUh",
+						"restaurant": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "delete_specific_restaurant_ticket",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token 6bedbebbbce9e8a66148cbe92a329063c2ab52ec"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/ticket_id/?id=2",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"1",
+						"ticket_id",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": {
+				"data": 200
+			}
+		},
+		{
+			"name": "get_specific_restaurant_ticket",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token 6bedbebbbce9e8a66148cbe92a329063c2ab52ec"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/specific_ticket/?id=3",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"1",
+						"specific_ticket",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": {
+				"data": {
+					"id": 3,
+					"name": "ticket_4",
+					"amount": 200,
+					"max_purchase": 10,
+					"sell_out": 0,
+					"ticket_coupon": "9HyUXM7VL48dcfrwZ9yLr2",
+					"restaurant": 1
+				}
+			}
+		},
+		{
+			"name": "get_ticket_purchased_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/purchase/",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"purchase",
+						""
+					]
+				}
+			},
+			"response": {
+				"data": [
+					{
+						"id": 1,
+						"name": "ticket_2",
+						"amount": 0,
+						"max_purchase": 10,
+						"sell_out": 0,
+						"ticket_coupon": "DrR4RUogLuXZofYemTpxop",
+						"restaurant": 1
+					},
+					{
+						"id": 3,
+						"name": "ticket_4",
+						"amount": 200,
+						"max_purchase": 10,
+						"sell_out": 0,
+						"ticket_coupon": "9HyUXM7VL48dcfrwZ9yLr2",
+						"restaurant": 1
+					}
+				]
+			}
+		},
+		{
+			"name": "get_specific_purchased_ticket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/purchase/9HyUXM7VL48dcfrwZ9yLr2",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"purchase",
+						"9HyUXM7VL48dcfrwZ9yLr2"
+					]
+				}
+			},
+			"response": {
+				"data": {
+					"id": 3,
+					"name": "ticket_4",
+					"amount": 200,
+					"max_purchase": 10,
+					"sell_out": 0,
+					"ticket_coupon": "9HyUXM7VL48dcfrwZ9yLr2",
+					"restaurant": 1
+				}
+			}
+		},
+		{
+			"name": "purchased_ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/purchase/?ticket_coupon=9HyUXM7VL48dcfrwZ9yLr2",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"purchase",
+						""
+					],
+					"query": [
+						{
+							"key": "ticket_coupon",
+							"value": "9HyUXM7VL48dcfrwZ9yLr2"
+						}
+					]
+				}
+			},
+			"response": {
+				"status": "ticket purchased"
+			}
+		},
+		{
+			"name": "restaurant_url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/restaurants_url/XLQfeLgsRcntd5WhsxmwZb",
+					"host": [
+						"http://127.0.0.1:8000"
+					],
+					"path": [
+						"api",
+						"v1",
+						"restaurants_url",
+						"XLQfeLgsRcntd5WhsxmwZb"
+					]
+				}
+			},
+			"response": {
+				"data": {
+					"id": 1,
+					"name": "restaurant_1",
+					"restaurants_url": "XLQfeLgsRcntd5WhsxmwZb",
+					"owner": 1
+				}
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
