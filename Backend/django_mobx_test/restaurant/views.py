@@ -41,15 +41,31 @@ class LoginViewSet(ViewSet):
 
 
 class RestaurantViewSet(ModelViewSet):
-    queryset = Restaurant.objects.all()
     permission_classes = (IsAuthenticated,)
     serializer_class = RestaurantModelSerializer
+
+    def get_object(self):
+        obj = Restaurant.objects.get(id=self.kwargs["pk"], owner=self.request.user)
+        return obj
+
+    def get_queryset(self):
+        obj = Restaurant.objects.filter(owner=self.request.user)
+        return obj
 
 
 class TicketViewSet(ModelViewSet):
     queryset = Ticket.objects.all()
     permission_classes = (IsAuthenticated,)
     serializer_class = TicketModelSerializer
+
+    def get_object(self):
+        obj = Ticket.objects.get(id=self.kwargs["pk"])
+        return obj
+
+    def get_queryset(self):
+        restaurant = Restaurant.objects.get(id=self.request.query_params['restaurant_id'], owner=self.request.user)
+        obj = Ticket.objects.filter(restaurant=restaurant)
+        return obj
 
 
 class PurchasedTicketViewSet(ModelViewSet):
