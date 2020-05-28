@@ -109,6 +109,11 @@
 							"key": "name",
 							"value": "restaurant_2",
 							"type": "text"
+						},
+						{
+							"key": "owner",
+							"value": "1",
+							"type": "text"
 						}
 					]
 				},
@@ -284,20 +289,23 @@
 							"key": "amount",
 							"value": "200",
 							"type": "text"
+						},
+						{
+							"key": "restaurant",
+							"value": "3",
+							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/ticket/",
+					"raw": "http://127.0.0.1:8000/api/v1/tickets/",
 					"host": [
 						"http://127.0.0.1:8000"
 					],
 					"path": [
 						"api",
 						"v1",
-						"restaurants",
-						"1",
-						"ticket",
+						"tickets",
 						""
 					]
 				}
@@ -333,15 +341,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/tickets/",
+					"raw": "http://127.0.0.1:8000/api/v1/api/v1/tickets/",
 					"host": [
 						"http://127.0.0.1:8000"
 					],
 					"path": [
 						"api",
 						"v1",
-						"restaurants",
-						"1",
 						"tickets",
 						""
 					]
@@ -386,23 +392,16 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/ticket_id/?id=2",
+					"raw": "http://127.0.0.1:8000/api/v1/tickets/1/",
 					"host": [
 						"http://127.0.0.1:8000"
 					],
 					"path": [
 						"api",
 						"v1",
-						"restaurants",
-						"1",
-						"ticket_id",
+						"tickets",
+						"1",	
 						""
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "2"
-						}
 					]
 				}
 			},
@@ -429,24 +428,18 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/restaurants/1/specific_ticket/?id=3",
+					"raw": "http://127.0.0.1:8000/api/v1/tickets/2/",
 					"host": [
 						"http://127.0.0.1:8000"
 					],
 					"path": [
 						"api",
 						"v1",
-						"restaurants",
+						"tickets",
 						"1",
-						"specific_ticket",
 						""
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "3"
-						}
 					]
+				
 				}
 			},
 			"response": {
